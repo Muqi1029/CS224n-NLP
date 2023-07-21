@@ -1,0 +1,41 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="3.12" />
+            <item index="1" class="java.lang.String" itemvalue="3.8" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="11">
+            <item index="0" class="java.lang.String" itemvalue="oauth2client" />
+            <item index="1" class="java.lang.String" itemvalue="pypng" />
+            <item index="2" class="java.lang.String" itemvalue="tensorflow-addons" />
+            <item index="3" class="java.lang.String" itemvalue="gin-config" />
+            <item index="4" class="java.lang.String" itemvalue="tensorflow-gan" />
+            <item index="5" class="java.lang.String" itemvalue="dopamine-rl" />
+            <item index="6" class="java.lang.String" itemvalue="google-api-python-client" />
+            <item index="7" class="java.lang.String" itemvalue="mesh-tensorflow" />
+            <item index="8" class="java.lang.String" itemvalue="tf_slim" />
+            <item index="9" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="10" class="java.lang.String" itemvalue="kfac" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="torch.backends.mps" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
