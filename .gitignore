@@ -1,0 +1,11 @@
+.idea/
+.ipynb_checkpoints/
+assignments/a2/utils/*
+__pycache__
+.DS_Store
+*.npy
+*.pickle
+assignments/a5_public/*.json
+assigements/a5_public/model.bin*
+project
+reading
