@@ -144,6 +144,7 @@ def train(args: Dict):
     
 
     model.train()
+    model.to(torch.device("cpu"))
 
     uniform_init = float(args['--uniform-init'])
     if np.abs(uniform_init) > 0.:

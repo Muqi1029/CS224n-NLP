@@ -111,7 +111,7 @@ def question_1d_sanity_check(model, src_sents, tgt_sents, vocab):
     # Configure for Testing
     reinitialize_layers(model)
     source_lengths = [len(s) for s in src_sents]
-    source_padded = model.vocab.src.to_input_tensor(src_sents, device=model.device)
+    source_padded = model.vocab.src.to_input_tensor(src_sents, device="cpu")
 
     # Load Outputs
     enc_hiddens_target = torch.load('./sanity_check_en_es_data/enc_hiddens.pkl')
@@ -195,7 +195,7 @@ def question_1f_sanity_check(model, src_sents, tgt_sents, vocab):
 
     # Run Tests
     with torch.no_grad():
-        dec_state_pred, o_t_pred, e_t_pred= model.step(Ybar_t, dec_init_state, enc_hiddens, enc_hiddens_proj, enc_masks)
+        dec_state_pred, o_t_pred, e_t_pred = model.step(Ybar_t, dec_init_state, enc_hiddens, enc_hiddens_proj, enc_masks)
     assert(dec_state_target[0].shape == dec_state_pred[0].shape), "decoder_state[0] shape is incorrect: it should be:\n {} but is:\n{}".format(dec_state_target[0].shape, dec_state_pred[0].shape)
     assert(np.allclose(dec_state_target[0].numpy(), dec_state_pred[0].numpy())), "decoder_state[0] is incorrect: it should be:\n {} but is:\n{}".format(dec_state_target[0], dec_state_pred[0])
     print("dec_state[0] Sanity Checks Passed!")
